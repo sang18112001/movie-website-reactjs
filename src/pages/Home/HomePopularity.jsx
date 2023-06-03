@@ -11,18 +11,18 @@ const PopularitySlider = ({ popularity, setImagePath, setIndexMovie }) => {
   const [card, setCard] = useState(0);
   const settings = {
     dots: false,
-    slidesToShow: 8,
+    slidesToShow: 2,
     slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 2,
-        }
-      },
+    // responsive: [
+    //   {
+    //     breakpoint: 1000,
+    //     settings: {
+    //       slidesToShow: 6,
+    //       slidesToScroll: 2,
+    //     }
+    //   },
       
-    ]
+    // ]
   };
 
   return (
