@@ -19,9 +19,9 @@ const WishlistEmpty = () => {
         <h3 className="wishlistEmpty-title">Oops! Your list is empty!</h3>
         <p className="wishlistEmpty-content">Looks like you haven't added anything to your list yet.</p>
       </div>
-      <a href="typeOfMovies.html?type=now_playing" className="wishlistEmpty-btn">
+      <Link to="/popularity" className="wishlistEmpty-btn">
         <button>Explore now</button>
-      </a>
+      </Link>
     </div>
   );
 };

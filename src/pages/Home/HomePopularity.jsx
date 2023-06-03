@@ -4,17 +4,25 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useState, useEffect } from 'react';
-import { IMG_PATH, moviesAPI } from '../../config';
+import { IMG_PATH } from '../../config';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import { getAPI } from '../../api/moviesAPI';
 const PopularitySlider = ({ popularity, setImagePath, setIndexMovie }) => {
   const [card, setCard] = useState(0);
   const settings = {
     dots: false,
-    infinite: true,
-    speed: 100,
-    slidesToShow: 2,
-    slidesToScroll: 1,
+    slidesToShow: 8,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 2,
+        }
+      },
+      
+    ]
   };
 
   return (

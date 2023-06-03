@@ -136,14 +136,15 @@
 }
 
 .comment-me .text input {
-  height: 50px;
+  height: 60px;
   width: 100%;
   border: none;
   outline: none;
-  padding: 20px;
+  padding: 10px 20px;
   font-size: 15px;
   margin: 0px;
   border-radius: 10px 10px 0px 0px;
+  font-size: 18px;
 }
 
 .comment-upload {
@@ -156,10 +157,12 @@
 
 .comment-upload button {
   background-color: var(--main-color);
-  padding: 5px 10px;
+  padding: 10px 20px;
   margin-right: 10px;
   color: white;
   margin: 0px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .active-inline {
@@ -185,7 +188,10 @@
     height: 40px;
   }
   .comment-me .text input {
-    height: 30px;
+    height: 50px;
+  }
+  .comment-upload button {
+    padding: 5px 10px;
   }
 }
 
@@ -201,15 +207,17 @@
   }
 }
 @media (max-width: 500px) {
-  .comment-me input {
+  .comment-me .text input {
     padding-left: 10px;
     font-size: 12px;
+    height: 30px;
   }
   .comment-upload {
-    padding: 3px 0px;
+    padding: 3px 10px;
   }
   .comment-upload button {
     padding: 2px 5px;
+    border-radius: 5px;
     font-size: 10px;
   }
 }

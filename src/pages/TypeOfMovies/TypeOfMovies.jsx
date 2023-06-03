@@ -31,6 +31,8 @@ const MoviesContainer = ({ moviesType, filters, setSearchParams }) => {
           count={countPage < 200 ? countPage : 200}
           variant="outlined"
           shape="rounded"
+          boundaryCount={2}
+          siblingCount={1}
           page={Number(filters.page)}
           onChange={(e, value) =>
             setSearchParams({

@@ -690,6 +690,9 @@ header.shadow .responsive-account {
   .body-container {
     padding: 30px 5% !important;
   }
+  #web-typeMovie-body {
+    padding: 0px 5%!important;
+  }
   #web_body_dashboard {
     padding: 0px 5% 0px 5% !important;
   }
@@ -736,7 +739,7 @@ header.shadow .responsive-account {
     gap: 10px;
   }
 
-  .header-account .btn {
+  .header-account .btn-me {
     margin: 0px;
     width: 100%;
   }

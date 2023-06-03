@@ -83,7 +83,7 @@
 }
 #web-homePage-body .movie-slider {
     position: absolute;
-    width: 30%;
+    width: 70%;
     z-index: 1;
     bottom: 10px;
     right: 20px;
@@ -275,6 +275,7 @@
 
 .genres-type {
     padding: 0px !important;
+    margin: 0px -10px;
 }
 
 .genre-box {
