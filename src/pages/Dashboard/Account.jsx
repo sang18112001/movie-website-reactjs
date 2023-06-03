@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getAccount } from '../../redux/store';
 import FormAccountModification from './FormAccount';
+import { FaRegEdit } from '@react-icons/all-files/fa/FaRegEdit';
 
 const Account = () => {
-  const uid = JSON.parse(localStorage.getItem('signUser')).uid
+  const uid = JSON.parse(localStorage.getItem('signUser')).uid;
   const accountState = useSelector(getAccount);
   const [avatar, setAvatar] = useState(accountState.avatar);
   const changeAvtHandler = (event) => {
@@ -27,7 +28,7 @@ const Account = () => {
             <img src={avatar} className="account_avt" width="100%"></img>
             <label htmlFor="inputTag">
               <div className="icon-change">
-                <i className="fa-regular fa-pen"></i>
+                <FaRegEdit />
               </div>
               <input
                 type="file"

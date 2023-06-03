@@ -56,6 +56,10 @@ const getAPI = {
     const response = await axios.delete(`${PERSONAL_API}/commentsReact/${idMovie}/${idComment}.json`);
     return response.data;
   },
+  userEditCmt: async (idMovie, idComment, editValue) => {
+    const response = await axios.patch(`${PERSONAL_API}/commentsReact/${idMovie}/${idComment}.json`, editValue);
+    return response.data;
+  }
 };
 
 export { getAPI };

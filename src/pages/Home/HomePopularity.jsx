@@ -52,11 +52,8 @@ const HomePopularity = () => {
   }, []);
   return (
     <Fragment>
-      <div className="body-container">
+      <div className="body-container popularity">
         <div className="movies-container first">
-          <div className="typeOfMovies-header other-header">
-            <div className="type-title">POPULARITY</div>
-          </div>
           <PopularitySlider popularity={popularity} setImagePath={setImagePath} setIndexMovie={setIndexMovie} />
           <div className="main-movies">
             <img src={imagePath} alt="" />

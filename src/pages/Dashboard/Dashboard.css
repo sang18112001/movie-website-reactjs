@@ -92,7 +92,7 @@ h1 {
   border-radius: 50%;
   border: 2px solid black;
 }
-.avatar-container .icon-change i {
+.avatar-container .icon-change svg {
   margin: auto;
   font-size: 16px;
   color: orange;
