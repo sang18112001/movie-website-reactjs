@@ -20,11 +20,11 @@ const MainMovie = ({ movie, casts, id }) => {
             <span>{movie.release_date.slice(0, 4)} .</span>
           </div>
           <h1>{movie.original_title}</h1>
-          <div className="genre-names">
+          {/* <div className="genre-names">
             {movie.genres.map((genre, index) => (
               <p key={index}>{genre.name}</p>
             ))}
-          </div>
+          </div> */}
           <div className="main-item movie-casts">
             <p className="title-cast">CASTS</p>
             <div className="casts-content">

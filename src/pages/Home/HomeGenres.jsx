@@ -13,7 +13,7 @@ const HomeGenres = () => {
   }, []);
   return (
     <Fragment>
-      <div className="body-container">
+      {/* <div className="body-container">
         <div className="movies-container">
           <div className="typeOfMovies-header other-header">
             <div className="type-title">GENRES</div>
@@ -35,7 +35,7 @@ const HomeGenres = () => {
             </Grid>
           </Box>
         </div>
-      </div>
+      </div> */}
     </Fragment>
   );
 };
