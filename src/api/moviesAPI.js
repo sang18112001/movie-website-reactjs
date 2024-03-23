@@ -10,6 +10,7 @@ const typeMovies = {
 };
 const getAPI = {
   moviesDisplay: async (type = 'popularity', page = '1', genres = '', lang = '', year = '') => {
+    const typeMovie = (genres || lang || year) ? typeMovies['popularity'] : typeMovies[type]
     const params = {
       api_key: API_KEY,
       with_genres: genres,
@@ -17,7 +18,7 @@ const getAPI = {
       primary_release_year: year,
       page,
     };
-    return await axiosClient.get(typeMovies[type], { params });
+    return await axiosClient.get(typeMovie, { params });
   },
   movieDetail: async (id, typeDetail = '') => await axiosClient.get(`movie/${id}${typeDetail}?api_key=${API_KEY}`),
 

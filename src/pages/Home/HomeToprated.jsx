@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import { IMG_PATH } from '../../config';
 import { Grid, Box } from '@mui/material';
 import { getAPI } from '../../api/moviesAPI';
-const HomeToprated = () => {
+const HomeTopRated = () => {
   const [topRated, setTopRated] = useState([]);
   useEffect(() => {
     getAPI.moviesDisplay('top_rated').then((data) => setTopRated(data.results));
@@ -44,4 +44,4 @@ const HomeToprated = () => {
   );
 };
 
-export default HomeToprated;
+export default HomeTopRated;

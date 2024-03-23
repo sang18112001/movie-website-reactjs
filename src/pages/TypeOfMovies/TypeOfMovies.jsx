@@ -13,6 +13,7 @@ const MoviesContainer = ({ moviesType, filters, setSearchParams }) => {
     setListMovies(data.results);
     setCountPage(data.total_pages);
   };
+
   useEffect(() => {
     getAPI.moviesDisplay(moviesType, filters.page).then((data) => setData(data));
   }, [moviesType]);

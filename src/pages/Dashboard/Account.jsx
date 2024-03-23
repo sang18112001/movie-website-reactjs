@@ -19,7 +19,6 @@ const Account = () => {
       setAvatar(reader.result);
     });
   };
-  console.log(accountState, "accountState")
   return (
     <>
       <h1 style={{ textAlign: 'center', fontSize: '34px' }}>Account Modification</h1>

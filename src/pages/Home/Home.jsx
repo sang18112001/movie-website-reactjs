@@ -1,6 +1,6 @@
 import '../../components/base.css'
 import './Home.css';
-import HomeToprated from './HomeToprated';
+import HomeTopRated from './HomeTopRated';
 import HomePopularity from './HomePopularity';
 import HomeNowPlaying from './HomeNowPlaying';
 import HomeUpComing from './HomeUpComing';
@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div id="web-homePage-body">
       <HomePopularity />
-      <HomeToprated />
+      <HomeTopRated />
       <HomeNowPlaying />
       <HomeUpComing />
       <HomeGenres />  

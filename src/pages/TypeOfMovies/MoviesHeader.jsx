@@ -23,6 +23,9 @@ const MoviesHeader = ({ moviesType, setSearchParams, searchParams }) => {
       page: 1,
     });
   };
+  const handleClearParams = () => {
+    setSearchParams({});
+  };
   return (
     <div className="movies-body-header">
       <div className="movies-title">
@@ -68,7 +71,7 @@ const MoviesHeader = ({ moviesType, setSearchParams, searchParams }) => {
               <i className="icon fa-solid fa-filter"></i>
               <span>Filter</span>
             </div>
-            <div className="filter-remove" onClick={() => setSearchParams({})}>
+            <div className="filter-remove" onClick={handleClearParams}>
               <span className="icon fa-solid fa-filter-circle-xmark"></span>Clear
             </div>
           </div>
