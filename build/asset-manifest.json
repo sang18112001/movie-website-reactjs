@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a4dfce19.css",
+    "main.js": "/static/js/main.62272042.js",
+    "static/media/wishlistEmpty_1.png": "/static/media/wishlistEmpty_1.6186094fa2a598b1fbdb.png",
+    "static/media/logo.png": "/static/media/logo.15fcd8761ae363d4f28f.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.a4dfce19.css.map": "/static/css/main.a4dfce19.css.map",
+    "main.62272042.js.map": "/static/js/main.62272042.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4dfce19.css",
+    "static/js/main.62272042.js"
+  ]
+}

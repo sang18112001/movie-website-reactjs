@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { getAccount } from '../../redux/store';
 import FormAccountModification from './FormAccount';
 import { FaRegEdit } from '@react-icons/all-files/fa/FaRegEdit';
+import Avatar from '../../components/common/Avatar';
 
 const Account = () => {
   const uid = JSON.parse(localStorage.getItem('signUser')).uid;
@@ -18,6 +19,7 @@ const Account = () => {
       setAvatar(reader.result);
     });
   };
+  console.log(accountState, "accountState")
   return (
     <>
       <h1 style={{ textAlign: 'center', fontSize: '34px' }}>Account Modification</h1>
@@ -25,7 +27,7 @@ const Account = () => {
         <div className="dashboard-avt">
           <p style={{ fontSize: '18px' }}>Change your avatar:</p>
           <div className="avatar-container">
-            <img src={avatar} className="account_avt" width="100%"></img>
+            <Avatar avatarUrl={avatar || accountState.avatar } width={'100px'} height={'100px'} />
             <label htmlFor="inputTag">
               <div className="icon-change">
                 <FaRegEdit />

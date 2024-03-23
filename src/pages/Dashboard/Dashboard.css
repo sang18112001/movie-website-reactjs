@@ -75,9 +75,10 @@ h1 {
 }
 
 .avatar-container {
-  width: 100px;
   position: relative;
+  width: fit-content;
 }
+
 .avatar-container label {
   width: max-content;
   position: absolute;

@@ -1,13 +1,14 @@
-import React, {  useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import logo from '../assets/image/logo.png';
-import { IMG_PATH} from '../config';
+import { IMG_PATH } from '../config';
 import './base.css';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { getAPI } from '../api/moviesAPI';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAccount } from '../redux/store';
 import { fetchUsersAccount } from '../redux/accountSlice';
+import Avatar from './common/Avatar';
 
 const LoggedComponent = ({ loggedRef, handleLoggedAccount, handleLogOut }) => {
   const checkUid = localStorage.getItem('signUser');
@@ -15,19 +16,17 @@ const LoggedComponent = ({ loggedRef, handleLoggedAccount, handleLogOut }) => {
   const accountState = useSelector(getAccount);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchUsersAccount(uid))
-  }, [uid])
+    dispatch(fetchUsersAccount(uid));
+  }, [uid]);
   return (
     <div className="header-account account-logged">
       <div className="account-logged-logo" onClick={handleLoggedAccount}>
-        <img src={accountState.avatar} alt="" className="logged-icon" />
+        <Avatar avatarUrl={accountState.avatar} width={'30px'} height={'30px'} />
       </div>
       <div className="account-logged-button" ref={loggedRef}>
         <div className="logged-box">
           <div className="logged_account">
-            <div>
-              <img src={accountState.avatar} className="account_avt" width="50px" height="50px"></img>
-            </div>
+            <Avatar avatarUrl={accountState.avatar} width={'50px'} height={'50px'} />
             <h3 className="account_name">{accountState.name}</h3>
           </div>
           <div className="logged_dashboard">
@@ -76,7 +75,7 @@ const HeaderSearch = () => {
   const ShowSearchBox = () => {
     return (
       <ul className="header-search-items active-block">
-        {searchedMovies.length != 0 ? (
+        {searchedMovies.length !== 0 ? (
           searchedMovies.map((movie, index) => {
             return (
               <li className="item" key={index}>
@@ -173,22 +172,22 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/now_playing" className={typeMovie == 'now_playing' ? 'active-menu' : ''}>
+              <Link to="/now_playing" className={typeMovie === 'now_playing' ? 'active-menu' : ''}>
                 Now Playing
               </Link>
             </li>
             <li>
-              <Link to="/popularity" className={typeMovie == 'popularity' ? 'active-menu' : ''}>
+              <Link to="/popularity" className={typeMovie === 'popularity' ? 'active-menu' : ''}>
                 Popularity
               </Link>
             </li>
             <li>
-              <Link to="/top_rated" className={typeMovie == 'top_rated' ? 'active-menu' : ''}>
+              <Link to="/top_rated" className={typeMovie === 'top_rated' ? 'active-menu' : ''}>
                 Top Rated
               </Link>
             </li>
             <li>
-              <Link to="/up_coming" className={typeMovie == 'up_coming' ? 'active-menu' : ''}>
+              <Link to="/up_coming" className={typeMovie === 'up_coming' ? 'active-menu' : ''}>
                 Up Coming
               </Link>
             </li>

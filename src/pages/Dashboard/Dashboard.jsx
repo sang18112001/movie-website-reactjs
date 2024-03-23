@@ -7,6 +7,7 @@ import Wishlist from './Wishlist';
 import { useSelector } from 'react-redux';
 import { getAccount } from '../../redux/store';
 import { BiLogOutCircle } from '@react-icons/all-files/bi/BiLogOutCircle';
+import Avatar from '../../components/common/Avatar';
 
 const Dashboard = () => {
   const queryDashboard = useParams().queryDashboard;
@@ -18,9 +19,7 @@ const Dashboard = () => {
       <div className="dashboard-main">
         <div className="dashboard-header">
           <div className="dashboard-info">
-            <div>
-              <img src={accountState.avatar} className="account_avt" width="50px" height="50px"></img>
-            </div>
+          <Avatar avatarUrl={accountState.avatar} width={'50px'} height={'50px'} />
             <h2 className="account_name">{accountState.name}</h2>
           </div>
           <div className="dashboard-menu">
